@@ -385,7 +385,6 @@ a.button {
 @media (max-width: 25.875em) {
   .modal-cliente {
     top: 100%;
-    color: red;
   }
 }
 
