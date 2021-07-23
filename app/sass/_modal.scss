@@ -1,0 +1,84 @@
+.modal {
+  display: none;
+  position:absolute;
+  top: 55%;
+  left: 50%;
+  width: 90vw;
+  transform:translate(-50%,-50%);
+  background: #363636;
+  box-sizing:border-box;
+  border-radius: 10px;
+  box-shadow:0 0 20px rgba(37, 37, 37, 0.2);
+  padding: 2.5rem;
+  text-align: left;
+  animation: all 300ms ease-in-out;
+  
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+
+  fieldset {
+    border: none;
+    padding-top: 1.225rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.visible {
+    display: block;
+  }
+
+  &--icon{
+    color: $brightyellow;
+    font-size: 1.7rem;
+    padding-right: 0.3125rem;
+  }
+
+  div {
+
+    &.cta-form {
+      display: flex;
+      justify-content: center;
+
+      a {
+
+        &.bttn-form{
+          box-sizing: content-box;
+          text-align: center;
+          width: 18.75rem;
+          //padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  &-cliente {
+
+    @include breakpoint-down(small) {
+      top: 65%;
+      // width: 70vw;
+    }
+
+    @include breakpoint-down(small_s) {
+      top: 100%;
+      color: red;
+      // width: 70vw;
+    }
+  }
+
+  &-produto {
+    top: 50%;
+
+    @include breakpoint-down(small_s) {
+      top: 82%;
+      // width: 70vw;
+    }
+  }
+}

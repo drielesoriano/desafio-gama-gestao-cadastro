@@ -1,0 +1,92 @@
+form {
+
+  label {
+    font-size: 0.9rem;
+    padding-right: 50px;
+    padding-left: 5px;
+  }
+
+  div {
+    padding-bottom: 0.765rem;
+
+    @include breakpoint-down(small) {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  input {
+      display:block;
+      height: 2.2rem;
+      width: 90%;      
+      background-color: $lightgrey;
+      color: $white;
+      border: none;
+      outline: none;
+      padding-left: 0.8rem;
+      border-radius: 8px;
+  
+      &::placeholder, 
+      ::focus {
+        padding-left: 0.8rem;
+        font-weight: 600;
+      }
+
+      &#cpf {
+        width: 50%;
+      }
+
+      &#numero,
+      &#uf{
+        width: 70px;
+      }
+
+      &#imagemProduto{
+        padding-top: 0.5rem;
+        background-color: transparent;
+      }
+
+      @include breakpoint-down(small) {
+        width: 100%;
+
+        &#cpf,
+        &#numero,
+        &#uf,
+        &#dataNascimento{
+          width: 50%;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        width: 90%;
+      }
+    }
+  
+    span {
+      font-size: 0.9rem;
+      color: $darkyellow;
+      border: 1px solid red;
+    }
+  
+    &.hide {
+      display: none;
+    }
+
+    textarea {
+      background-color: $lightgrey;
+      color: $white;
+      border: none;
+      outline: none;
+      padding-top: 0.2rem;
+      padding-left: 0.4rem;
+      border-radius: 8px;
+
+      width: 90%;
+      height: 100px;
+
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+
+    
+}

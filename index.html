@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Driele Soriano">
+  <meta name="description" content="Página de Gestão de Cadastro para o Desafio #2 Hiring Coders">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="./app/css/style.css">
+  <title>Gestão de Cadastro - Desafio #2 | Hiring Coders</title>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="container flex flex-jc--sb flex-ai--c">
+      <a href="/" class="header__logo">
+        <img src="assets/images/logo.svg" alt="logo"/>
+      </a>
+
+      <a href="#" class="header__toggle hide-desktop" title="menu">
+        <i id="menu-toggle" class="uil uil-bars header__toggle-icon"></i>
+        <i id="menu-toggle-close" class="uil uil-times header__toggle-icon hiden"></i>
+        <!--<span></span>
+        <span></span>
+        <span></span>-->
+      </a>
+
+      <div id="header__links" class="header__links hide-mobile">
+        <a href="/">
+          <i class="uil uil-estate header__links--icon"></i>Início
+        </a>
+        <a href="#">
+          <i class="uil uil-store header__links--icon"></i>Nossas Lojas
+        </a>
+        <a href="#">
+          <i class="uil uil-envelope header__links--icon"></i>Atendimento
+        </a>
+      </div>
+      <div class="header__user-area hide-mobile">
+
+        <a href="#" title="perfil usuário">
+          <i class="uil uil-user header__links--icon"></i>
+        </a>
+
+        <a href="#" title="carrinho de compras">
+          <i class="uil uil-shopping-bag header__links--icon"></i>
+        </a>
+      </div>
+    </nav>
+
+    <div id="header-menu" class="header__menu container hide hide-desktop">
+      <a href="/">
+        <i class="uil uil-estate header__links--icon"></i>Início
+      </a>
+      <a href="#">
+        <i class="uil uil-store header__links--icon"></i>Nossas Lojas
+      </a>
+      <a href="#">
+        <i class="uil uil-envelope header__links--icon"></i>Atendimento
+      </a>
+
+      <div class="header__menu-user">
+        <a href="#">
+          <i class="uil uil-user header__links--icon"></i> Login
+        </a>
+        <a href="#" title="carrinho de compras">
+          <i class="uil uil-shopping-bag header__links--icon"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="content container flex">
+    <div class="container-content  flex-jc--c flex-ai--c">
+        <h2>Gestão de Cadastro</h2>
+        <p>Escolha a baixo qual categoria gostaria de cadastrar:</p>
+        
+        <div class="bttn-home">
+          <a href="#" class="button" id="bttn-cliente" alt="Cadastro Cliente">Cliente</a>
+          <a href="#" class="button" id="bttn-produto" alt="Cadastro Produto">Produto</a>
+        </div>
+
+      <section class="modal modal-cliente" id="modal-cliente">
+        <div class="modal-header">
+          <div> <h3>Cadastrar Cliente</h3> </div>
+          <div>
+            <a href="#" class="close-modal" id="close-modal-cliente" title="Fechar Modal">
+              <i class="uil uil-times modal--icon"></i>
+            </a>
+          </div>
+        </div>
+        <form action="" id="formCliente">
+          <fieldset title="Informações Pessoais">
+            <div>
+              <label for="primeiroNome">Nome</label>
+              <input type="text" required name="primeiroNome" id="primeiroNome">
+            </div>
+            <div>
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" required name=sobrenome" id="sobrenome">
+            </div>
+            <div>
+              <label for="dataNascimento">Data Nascimento</label>
+              <input type="date" required name=dataNascimento" id="dataNascimento">
+            </div>
+            <div>
+              <label for="cpf">CPF</label>
+              <input type="number" required name=cpf" id="cpf" maxlength="11">
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" required name=email" id="email">
+            </div>
+            <div>
+              <label for="telefone">Telefone</label>
+              <input type="tel" required name=telefone" id="telefone">
+            </div>
+          </fieldset>
+  
+          <fieldset title="Endereço">
+            <div>
+              <label for="rua">Rua</label>
+              <input type="text" required name=rua" id="rua">
+             </div>
+             <div>
+              <label for="numero">Nº</label>
+              <input type="numero" name=numero" id="numero" maxlength="5">
+            </div>
+            <div>
+              <label for="bairro">Bairro</label>
+              <input type="text" required name=bairro" id="bairro">
+            </div>
+            <div>
+              <label for="cidade">Cidade</label>
+              <input type="text" required name=cidade" id="cidade">
+            </div>
+            <div>
+              <label for="cep">CEP</label>
+              <input type="number" required name=cep" id="cep">
+            </div>
+            <div>
+              <label for="uf">UF</label>
+              <input type="text" required name="uf" id="uf" maxlength="2"> 
+            </div>
+          </fieldset>
+        </form>
+        <div class="cta-form">
+          <a id="cadastrarCliente" class="button bttn-form">Cadastrar Cliente</a> 
+        </div>
+      </section>
+
+      <section class="modal modal-produto" id="modal-produto">
+        <div class="modal-header">
+          Cadastrar Produto
+          <a href="#" class="close-modal" id="close-modal-produto" title="Fechar Modal">
+            <i class="uil uil-times modal--icon"></i>
+          </a>
+        </div>
+
+        <form action="" id="formProduto">
+          <fieldset>
+            <div>
+              <label for="nomeProduto">Nome Produto</label>
+              <input type="text" required name="nomeProduto" id="nomeProduto" />
+            </div>
+            <div>
+              <label for="codigo">Código</label>
+              <input type="text" required name="codigo" id="codigo" />
+            </div>
+            <div>
+              <label for="quantidade">Quantidade</label>
+              <input type="number" name="quantidade" id="quantidade" />
+            </div>
+            <div>
+              <label for="categoria">Categoria</label>
+              <input type="text" required name="categoria" id="categoria" />
+            </div>
+            <div>
+              <label for="imagemProduto">Imagem</label>
+              <input type="file" name="imagemProduto" id="imagemProduto" />
+            </div> 
+            <div>
+              <label for="preco">Preço</label>
+              <input type="number" required name="preco" id="preco"  step="0.01" />
+            </div>             
+            <div>
+              <label for="descricao">Descrição</label>
+              <textarea required name="descricao" id="descricao" title="Descrição Produto" rows="5" cols="33"></textarea>
+            </div>            
+          </fieldset>
+        </form>
+
+        <div class="cta-form">
+          <a id="cadastrarProduto" class="button bttn-form">Cadastrar Produto</a> 
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer class="footer flex">
+    <a href="/" class="footer__logo">
+      <img src="assets/images/logo.svg" alt="logo"/>
+    </a>
+
+    <div class="footer__links">
+      <a href="/">
+        <i class="uil uil-estate header__links--icon"></i>Início
+      </a>
+      <a href="#">
+        <i class="uil uil-store header__links--icon"></i>Nossas Lojas
+      </a>
+      <a href="#">
+        <i class="uil uil-envelope header__links--icon"></i>Atendimento
+      </a>
+    </div>
+
+    <span>
+      Desenvolvido por <a href="">Driele Soriano</a> para o Desafio #2 do Hiring Coders | Gama Academy e VTEX
+    <span>
+  </footer>
+  
+
+
+  <script src="app/js/script.js"></script>
+</body>
+</html>
